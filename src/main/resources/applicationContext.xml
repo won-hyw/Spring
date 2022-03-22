@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 어쩔티비 객체 생성 요청 -->
+    <bean id="tv" class="polymorphism.어쩔TV">
+        <!-- <constructor-arg ref="sony"/>
+        <constructor-arg value="2700000"/> -->
+        <constructor-arg index="0" ref="sony"/>
+        <constructor-arg index="1" value="2700000"/>
+    </bean>
+    <!-- 소니스피커 객체 생성 요청 -->
+    <bean id="sony" class="polymorphism.SonySpeaker"/>
+</beans>
