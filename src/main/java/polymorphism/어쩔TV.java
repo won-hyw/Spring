@@ -2,19 +2,29 @@ package polymorphism;
 
 public class 어쩔TV implements TV {
 
-    private SonySpeaker speaker;
+    private Speaker speaker;
     private int price;
+
+    public void setSpeaker(Speaker speaker) {
+        System.out.println("===> setSpeaker() 호출");
+        this.speaker = speaker;
+    }
+
+    public void setPrice(int price) {
+        System.out.println("===> setPrice() 호출");
+        this.price = price;
+    }
 
     public 어쩔TV() {
         System.out.println("===> 어쩔티비 객체 생성");
     }
 
-    public 어쩔TV(SonySpeaker speaker) {
+    public 어쩔TV(Speaker speaker) {
         System.out.println("===> 어쩔티비 객체 생성(2)");
         this.speaker = speaker;
     }
 
-    public 어쩔TV(SonySpeaker speaker, int price) {
+    public 어쩔TV(Speaker speaker, int price) {
         System.out.println("===> 어쩔티비 객체 생성(3)");
         this.speaker = speaker;
         this.price = price;
