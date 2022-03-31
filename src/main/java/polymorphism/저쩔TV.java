@@ -1,12 +1,14 @@
 package polymorphism;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
 
 @Component("tv")
 public class 저쩔TV implements TV {
 
-    // speaker 변수에 들어갈 객체를 자동으로 할당을 해준다.
     @Autowired
     private Speaker speaker;
 
